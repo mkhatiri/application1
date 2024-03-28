@@ -25,5 +25,5 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: deploiment
-        run: echo je suis entrain de depoiyer une nouvelle version de l'application 
+        run: echo "je suis entrain de depoiyer une nouvelle version de l'application"
 
