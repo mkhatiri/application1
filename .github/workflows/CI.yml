@@ -21,10 +21,10 @@ jobs:
           pip install pylint
           pylint example.py
       
-      - name: integration
-        run: echo je suis entraind d'essayer d'integrer mon code dans la branche main
 
       - name: test
         run: |
-          echo test OK
-          ls virements
+          pytest
+          
+      - name: integration
+        run: echo je suis entraind d'essayer d'integrer mon code dans la branche main
