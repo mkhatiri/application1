@@ -3,7 +3,7 @@
 name: CI
 
 on:
-  pull_request:
+  push:
     branches: [ "main" ]
 
   workflow_dispatch:
@@ -16,10 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: lint
-        run: |
-          pip install pylint
-          pylint example.py
+
       
 
       - name: test
@@ -28,3 +25,8 @@ jobs:
           
       - name: integration
         run: echo je suis entraind d'essayer d'integrer mon code dans la branche main
+
+      - name: lint
+        run: |
+          pip install pylint
+          pylint .
